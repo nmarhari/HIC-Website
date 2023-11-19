@@ -11,7 +11,7 @@ body {
 
 /* Header/logo Title */
 .header {
-    padding: 80px;
+    /*padding-top: 80px;*/
     text-align: center;
     background: #112F08;
     color: white;
@@ -20,7 +20,7 @@ body {
 
 /* Increase the font size of the heading */
 .header h1 {
-    font-size: 100px;
+    font-size: 5vw;
     position: absolute;
     top: 25%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
@@ -34,7 +34,7 @@ body {
 }
 
 .header h2 {
-    font-size: 40px;
+    font-size: 2.5vw;
     position: absolute;
     top: 40%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
@@ -45,11 +45,10 @@ body {
 }
 
 .header img {
-    width: 111.5%;
+    width: 100%;
     height: auto;
     z-index: 0;
-    margin-left: -80px;
-    margin-top: -80px;
+    margin-top: 0;
     filter: brightness(.4);
 }
 
