@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    background-color: #112F08;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #112F08;
+    color: white;
+    position: relative;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 25%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1; /* Ensure text is above the image */
+    font-family: 'sans-serif', Helvetica;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+
+}
+
+.header h2 {
+    font-size: 40px;
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    color: rgb(254, 206, 13);
+    z-index: 1; /* Ensure text is above the image */
+    font-family: 'sans-serif', Helvetica;
+}
+
+.header img {
+    width: 111.5%;
+    height: auto;
+    z-index: 0;
+    margin-left: -80px;
+    margin-top: -80px;
+    filter: brightness(.4);
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #112F08;
+    height: 59px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Main column */
+.main {
+    -ms-flex: 70%;
+    /* IE10 */
+    flex: 70%;
+    background-color: #112F08;
+    color: white;
+    padding: 20px;
+    margin-top: -10px;
+
+}
+
+.main h2 {
+    color: white;
+    font-size: 35px;
+}
+
+.main img {
+    height: auto;
+    width: 400px;
+}
+
+/* Fake image, just for this example */
+.squareimg {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
