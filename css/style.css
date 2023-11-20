@@ -45,6 +45,12 @@ body {
     font-family: 'sans-serif', Helvetica;
 }
 
+.header a {
+    text-decoration: none;
+    color: rgb(254, 206, 13);
+    text-decoration: underline;
+}
+
 .header img {
     width: 100%;
     height: auto;
