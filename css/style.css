@@ -43,6 +43,7 @@ body {
     color: rgb(254, 206, 13);
     z-index: 1; /* Ensure text is above the image */
     font-family: 'sans-serif', Helvetica;
+    padding-top: 5%;
 }
 
 .header a {
