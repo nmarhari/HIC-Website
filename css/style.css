@@ -38,7 +38,7 @@ body {
 .header h2 {
     font-size: 2.5vw;
     position: absolute;
-    top: 40%; /* Adjust as needed */
+    top: 44%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
     transform: translate(-50%, -50%);
     color: rgb(254, 206, 13);
@@ -55,7 +55,9 @@ body {
 
 .header img {
     width: 100%;
-    height: auto;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
     z-index: 0;
     margin-top: 0;
     filter: brightness(.4);
@@ -125,7 +127,7 @@ body {
 
 .home-content {
     padding-top: 10vh;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     color: #F5F9DC;
 }
@@ -159,7 +161,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .home-content {
+        height: 250vh;
+        padding-top: 5vh;
+    }
     .row-img-left {
+        display: block;
+        flex-direction: column;
+    }
+    .row-img-right {
         display: block;
         flex-direction: column;
     }
@@ -175,9 +185,16 @@ body {
         width: 100%;
         padding: 0 5vw;
     }
+    .col-img {
+        padding: 5vh 0;
+    }
 }
 
 .row-img-left {
+    display: flex;
+}
+
+.row-img-right {
     display: flex;
 }
 
