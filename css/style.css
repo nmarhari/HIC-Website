@@ -17,6 +17,7 @@ body {
     color: white;
     position: relative;
     width: 100vw;
+    overflow: hidden;
 }
 
 /* Increase the font size of the heading */
@@ -58,6 +59,23 @@ body {
     z-index: 0;
     margin-top: 0;
     filter: brightness(.4);
+}
+
+@media screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 10vw;
+    }
+    .header h2 {
+        font-size: 7vw;
+        margin-top: 10vh;
+    }
+    .header img {
+        height: 50vh;
+        width: 100vw;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 /* Style the top navigation bar */
@@ -137,6 +155,25 @@ body {
     text-align: center;
     padding: 0 5vw;
     font-size: 1.5vw;
+}
+
+@media screen and (max-width: 600px) {
+    .row-img-left {
+        display: block;
+        flex-direction: column;
+    }
+    .col-img {
+        width: 100%;
+        padding: 0;
+    }
+    .col-img img {
+        width: 75vw;
+    }
+    .col-text {
+        font-size: 4vw; 
+        width: 100%;
+        padding: 0 5vw;
+    }
 }
 
 .row-img-left {
