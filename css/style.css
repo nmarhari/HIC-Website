@@ -16,6 +16,7 @@ body {
     background: #112F08;
     color: white;
     position: relative;
+    width: 100vw;
 }
 
 /* Increase the font size of the heading */
@@ -99,8 +100,53 @@ body {
     -ms-flex-wrap: wrap;
     /* IE10 */
     flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
 }
 
+.home-content {
+    padding-top: 10vh;
+    height: 100vh;
+    width: 100%;
+    color: #F5F9DC;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.col-img {
+    width: 40%;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+}
+.col-img img {
+    width: 25vw;
+}
+
+.col-text {
+    width: 60%;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 5vw;
+    font-size: 1.5vw;
+}
+
+.row-img-left {
+    display: flex;
+}
+
+.divider {
+    color: #F5F9DC;
+    margin: 5vh 10vw;
+}
 /* Main column */
 .main {
     -ms-flex: 70%;
