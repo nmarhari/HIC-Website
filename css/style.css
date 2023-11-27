@@ -372,3 +372,7 @@ and show link that will close navbar*/
         text-align: right;
     }
 }
+
+* {
+    overflow-x: hidden;
+}
