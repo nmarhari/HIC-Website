@@ -360,7 +360,8 @@ and show link that will close navbar*/
 }
 
 @media screen and (max-width: 620px) {
-    .navbar.responsive { position: relative; }
+    .navbar.responsive { position: relative;}
+    .navbar.responsive :first-child { display: none; }
     .navbar.responsive a.icon {
         position: relative;
         right: 0;
