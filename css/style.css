@@ -27,7 +27,7 @@ body {
     top: 20%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
     transform: translate(-50%, -50%);
-    color: white;
+    color: #F5F9DC;
     z-index: 1; /* Ensure text is above the image */
     font-family: 'sans-serif', Helvetica;
     white-space: nowrap; /* Prevent text from wrapping */
@@ -210,6 +210,79 @@ body {
     color: rgb(254, 206, 13);
 }
 
+
+.row-center {
+    text-align: center;
+    color: #F5F9DC;
+}
+.row-center .center-header {
+    margin: 5vh 0;
+}
+.row-center .date-selection {
+    margin: 5vh 0;
+}
+
+.contact {
+    color: #F5F9DC;
+    display: flex;
+    margin: 10vh 0;
+}
+.row-left {
+    width: 50%;
+    text-align: center;
+}
+.row-right {
+    width: 50%;
+    text-align: center;
+}
+
+.contact input {
+    width: 80%;
+    margin: 1vh 0;
+    padding: 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #519872;
+    color: #F5F9DC;
+}
+.contact textarea {
+    width: 80%;
+    margin: 1vh 0;
+    padding: 15px;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 500px;
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #519872;
+    color: #F5F9DC;
+}
+
+.booking-content button {
+    padding: 12px 20px;
+    margin: 2vh 0;
+    border-radius: 20px;
+    background-color: #2B503C;
+    color: #F5F9DC;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        display: block;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact .row-left {
+        width: 100%;
+    }
+    .contact .row-right {
+        width: 100%;
+        margin: 5vh 0;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .home-content {
         padding-top: 5vh;
@@ -287,7 +360,8 @@ and show link that will close navbar*/
 }
 
 @media screen and (max-width: 620px) {
-    .navbar.responsive { position: relative; }
+    .navbar.responsive { position: relative;}
+    .navbar.responsive a:last-child { display: none; }
     .navbar.responsive a.icon {
         position: relative;
         right: 0;
@@ -298,4 +372,8 @@ and show link that will close navbar*/
         display: block;
         text-align: right;
     }
+}
+
+* {
+    overflow-x: hidden;
 }
