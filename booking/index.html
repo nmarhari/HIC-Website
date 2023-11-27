@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Page Title</title>
+    <title>Visit Giovanni's</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="navbar" id="top-navbar">
+    <ul class="navbar" id="top-navbar">
         <a href="javascript:void(0);" class="icon" onclick="showNav()">
             <i class="fa fa-bars"></i>
         </a>
@@ -25,50 +25,96 @@
         <a href="#" class="logo">
             <img src="../img/Logo1Black.png">
         </a>
-    </div>
+    </ul>
 
     <div class="header">
         <img src="https://media.cntraveler.com/photos/61ee406bfe18edcbd885cb51/16:9/w_2560,c_limit/WhitefaceLodge-Lake-Placid-NY.jpg" alt="Header Image">
-        <h1>Book a day now!</h1>
-        <h2>(330) 330-3300 or <a href="booking.html">Contact Here </a> </h2>
+        <h1>Start your adventure!</h1>
+        
     </div>
 
-    
+    <section class="booking-content">
+        <div class="container">
 
-    <div class="row">
-        <div class="side">
-            <h2>About Me</h2>
-            <h5>Photo of me:</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            <h3>More Text</h3>
-            <p>Lorem ipsum dolor sit ame.</p>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div>
+            <div class="row-center">
+                <div class="center-header">
+                    <h2>Book Now</h2>
+                </div>
+
+                <div class="cabin-selection">
+                    <h3>Select your cabin:</h3>
+                    <div class="dropdown">
+                        <select name="cabin">
+                            <option value="none" selected hidden disabled> </option>
+                            <option value="dreamcatcher">Dreamcatcher</option>
+                            <option value="dreamcatcher">Rising Sun</option>
+                            <option value="dreamcatcher">Magnolia</option>
+                            <option value="dreamcatcher">Rockpath</option>
+                        </select>
+                    </div>
+                
+                </div>
+
+                <div class="date-selection">
+                    <h3>Select a date:</h3>
+                    <input type="date" id="date" name="date">
+                </div>
+                    
+                <div class="booking-total">
+                    <h3>Your total:</h3>
+                    <h2>$X</h2>
+                </div>
+                
+                <div class="booking-book">
+                    <button>Book</button>
+                </div>
+                    
+            </div>
+
+            <hr class="divider">
+
+            <div class="contact">
+
+                <div class="row-left">
+                    <span>
+                        <h3>Take me there!</h3>
+                        <button>Directions</button>
+                    </span>
+                    <span>
+                        <h3>(330) 333 3333</h3>
+                        <button>Call Us</button>
+                    </span>
+                    <span>
+                        <h3>Check out our socials!</h3>
+                        <div class="socials">
+                            <i class=""></i>
+                            <i class=""></i>
+                            <i class=""></i>
+                        </div>
+                    </span>
+                </div>
+                
+                <div class="row-right">
+                    <span>
+                        <h3>Send us a message!</h3>
+                        <form action="">
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="Email">
+                            <input type="phone" placeholder="Phone (Optional)">
+                            <input type="text" placeholder="Subject">
+                            <textarea rows="8" placeholder="Message"></textarea>
+                        </form>
+                        <button>Send</button>
+                    </span>
+                </div>
+            </div>
+
         </div>
-        <div class="main">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco.</p>
-            <br>
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco.</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="footer">
-        <h2>Footer</h2>
-    </div>
+    <section class="footer">
+        <h2><a href="./booking#">© Giovanni's Lodge - (330) 131 1542</a></h2>
+    </section>
 
 </body>
 
