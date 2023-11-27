@@ -65,10 +65,10 @@ body {
 
 @media screen and (max-width: 600px) {
     .header h1 {
-        font-size: 10vw;
+        font-size: 8vw;
     }
     .header h2 {
-        font-size: 7vw;
+        font-size: 6vw;
         margin-top: 10vh;
     }
     .header img {
@@ -111,6 +111,21 @@ body {
 .navbar a:hover {
     background-color: #ddd;
     color: black;
+}
+
+.navbar .logo {
+    width: 70px;
+    padding: 0;
+    float: left;
+    overflow: none;
+}
+.navbar img {
+    width: 70px;
+    height: 55px;
+    float: left;
+    object-fit: cover;
+    object-position: center;
+    
 }
 
 /* Column container */
@@ -261,15 +276,17 @@ body {
 
 /* when screen is less than 600px, hide all links except home
 and show link that will close navbar*/
-@media screen and (max-width: 600px) {
-    .navbar a:not(:last-child) { display: none; }
+@media screen and (max-width: 620px) {
+    .navbar a:not(:last-child){ 
+        display: none; 
+    }
     .navbar a.icon {
         float: right;
         display: block;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     .navbar.responsive { position: relative; }
     .navbar.responsive a.icon {
         position: relative;
