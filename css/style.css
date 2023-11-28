@@ -16,14 +16,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: var(--primary);
+    background-color: var(--dark-primary);
 }
 
 /* Header/logo Title */
 .header {
     /*padding-top: 80px;*/
     text-align: center;
-    background: var(--primary);
+    background: var(--dark-primary);
     color: var(--white);
     position: relative;
     width: 100vw;
@@ -206,6 +206,7 @@ body {
 }
 .gio-map iframe {
     width: 60%;
+    border: 2px solid var(--white);
 }
 
 .footer {
