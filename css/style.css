@@ -16,7 +16,7 @@ body {
     background: #112F08;
     color: white;
     position: relative;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -162,6 +162,9 @@ body {
 }
 .col-img img {
     width: 25vw;
+}
+
+.container img {
     border: 2px solid white;
 }
 
@@ -222,10 +225,10 @@ body {
     margin: 5vh 0;
 }
 
-.contact {
+.content-split {
     color: #F5F9DC;
     display: flex;
-    margin: 10vh 0;
+    margin-top: 5vh;
 }
 .row-left {
     width: 50%;
@@ -236,7 +239,19 @@ body {
     text-align: center;
 }
 
-.contact input {
+.content-split img {
+    width: 60%;
+}
+
+.content-split p {
+    padding: 0 4vw;
+}
+
+.activities-portal .row-center {
+    padding: 5vh 0;
+}
+
+.content-split input {
     width: 80%;
     margin: 1vh 0;
     padding: 15px;
@@ -245,7 +260,7 @@ body {
     background-color: #519872;
     color: #F5F9DC;
 }
-.contact textarea {
+.content-split textarea {
     width: 80%;
     margin: 1vh 0;
     padding: 15px;
@@ -269,15 +284,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .contact {
+    .content-split {
         display: block;
         flex-direction: column;
         text-align: center;
     }
-    .contact .row-left {
+    .content-split .row-left {
         width: 100%;
     }
-    .contact .row-right {
+    .content-split .row-right {
         width: 100%;
         margin: 5vh 0;
     }
