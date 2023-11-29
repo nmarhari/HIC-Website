@@ -150,7 +150,7 @@ body {
     overflow: hidden;
 }
 
-.home-content {
+.general-content {
     padding-top: 10vh;
     width: 100%;
     color: var(--white);
@@ -184,6 +184,7 @@ body {
     flex: auto;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 0 5vw;
     font-size: 1.5vw;
@@ -262,6 +263,15 @@ body {
     padding: 5vh 0;
 }
 
+.back-to-activities {
+    text-align: center;
+    margin-top: 5vh;
+}
+.back-to-activities a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
 .content-split input {
     width: 80%;
     margin: 1vh 0;
@@ -310,7 +320,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .home-content {
+    .general-content {
         padding-top: 5vh;
         margin-bottom: 5vh;
     }
