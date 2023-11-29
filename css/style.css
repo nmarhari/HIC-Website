@@ -271,6 +271,9 @@ body {
     text-decoration: none;
     color: var(--secondary);
 }
+.back-to-activities h2 {
+    margin: 0;
+}
 
 .content-split input {
     width: 80%;
