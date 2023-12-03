@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <ul class="navbar" id="top-navbar">
         <a href="javascript:void(0);" class="icon" onclick="showNav()">
             <i class="fa fa-bars"></i>
@@ -32,146 +31,65 @@
     <div class="header">
         <img src="../img/booking-header.jpg" alt="Header Image">
         <h1>Start your adventure!</h1>
-        
+
     </div>
 
     <section class="booking-content">
         <div class="container">
-
-            <div class="row-center">
-                <div class="center-header">
-                    <h2>Book Now</h2>
-                </div>
-
-                <div class="cabin-selection">
-                    <h3>Select your cabin:</h3>
-                    <div class="dropdown">
-                        <select name="cabin">
-                            <option value="none" selected hidden disabled> </option>
-                            <option value="dreamcatcher">Dreamcatcher</option>
-                            <option value="dreamcatcher">Rising Sun</option>
-                            <option value="dreamcatcher">Magnolia</option>
-                            <option value="dreamcatcher">Rockpath</option>
-                        </select>
-                    </div>
-                
-                </div>
-
-                <div class="date-selection">
-                    <h3>Select a date:</h3>
-                    <div class="wrapper">
-                        <div class="calendar-menu">
-                            <header>
-                                <p class="current-date">December 2023</p>
-                                <div class="icons">
-                                    <span id="prev">&#60;</span>
-                                    <span id="next">&#62;</span>
-                                </div>
-                            </header>
-                            <div class="calendar">
-                                <ul class="weeks">
-                                    <li>Sun</li>
-                                    <li>Mon</li>
-                                    <li>Tue</li>
-                                    <li>Wed</li>
-                                    <li>Thu</li>
-                                    <li>Fri</li>
-                                    <li>Sat</li>
-                                </ul>
-                                <ul class="days">
-                                    <li>26</li>
-                                    <li>27</li>
-                                    <li>28</li>
-                                    <li>29</li>
-                                    <li>30</li>
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-                                    <li>7</li>
-                                    <li>8</li>
-                                    <li>9</li>
-                                    <li>10</li>
-                                    <li>11</li>
-                                    <li>13</li>
-                                    <li>14</li>
-                                    <li>15</li>
-                                    <li>16</li>
-                                    <li>17</li>
-                                    <li>18</li>
-                                    <li>19</li>
-                                    <li>20</li>
-                                    <li>21</li>
-                                    <li>22</li>
-                                    <li>23</li>
-                                    <li>24</li>
-                                    <li>25</li>
-                                    <li>26</li>
-                                    <li>27</li>
-                                    <li>28</li>
-                                    <li>29</li>
-                                    <li>30</li>
-                                    <li>31</li>
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    
-                <div class="booking-total">
-                    <h3>Your total:</h3>
-                    <h2>$X</h2>
-                </div>
-                
-                <div class="booking-book">
-                    <button>Book</button>
-                </div>
-                    
-            </div>
-
-            <hr class="divider">
-
             <div class="content-split">
 
                 <div class="row-left">
+                    <div class="cabin-selection">
+                        <h3>Select your cabin</h3>
+                        <div class="dropdown">
+                            <select name="cabin" id="cabin-select">
+                                <option> </option>
+                                <option value="dreamcatcher">Dreamcatcher</option>
+                                <option value="rising-sun">Rising Sun</option>
+                                <option value="magnolia">Magnolia</option>
+                                <option value="rockpath">Rockpath</option>
+                            </select>
+                        </div>
+                        <img src="https://columbiawoodlands.com/assets/images/Dreamcatcher8.png" id="dreamcatcherImage" class="cabin-image">
+                        <img src="https://gallery.streamlinevrs.com/locations-images/image_347122.jpeg" id="risingSunImage" class="cabin-image">
+                        <img src="https://www.gannett-cdn.com/presto/2019/07/15/PSTC/48eb92e8-6074-45c5-be56-4ec32c80f8c8-1.jpg?crop=3599,2025,x0,y0&width=3200&height=1680&fit=bounds" id="magnoliaImage" class="cabin-image">
+                        <img src="https://th.bing.com/th/id/R.b76360be6aa800366d1254faec23aed4?rik=l0uGFjIQiUopRQ&pid=ImgRaw&r=0" id="rockpathImage" class="cabin-image">
+                        <br>
+                        <span id="total"></span>
+                    </div>
+                </div>
+
+                <div class="row-right">
                     <span>
+                        <h3>Booking information</h3>
+                        <form action="">
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="Email">
+                            <input type="phone" placeholder="Phone (Optional)">
+                            <input type="date" placeholder="Date">
+                            <textarea rows="8" placeholder="Message (optional)"></textarea>
+                        </form>
+                        <button>Send</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-tri">
+                <div class="row">
+                    <span class="content-tri">
                         <h3>Take me there!</h3>
                         <button>Directions</button>
                     </span>
-                    <span>
+                    <span class="content-tri">
                         <h3>(330) 333 3333</h3>
                         <button>Call Us</button>
                     </span>
-                    <span>
+                    <span class="content-tri">
                         <h3>Check out our socials!</h3>
                         <div class="socials">
                             <i class=""></i>
                             <i class=""></i>
                             <i class=""></i>
                         </div>
-                    </span>
-                </div>
-                
-                <div class="row-right">
-                    <span>
-                        <h3>Send us a message!</h3>
-                        <form action="">
-                            <input type="text" placeholder="Name">
-                            <input type="email" placeholder="Email">
-                            <input type="phone" placeholder="Phone (Optional)">
-                            <input type="text" placeholder="Subject">
-                            <textarea rows="8" placeholder="Message"></textarea>
-                        </form>
-                        <button>Send</button>
                     </span>
                 </div>
             </div>
@@ -182,7 +100,7 @@
     <section class="footer">
         <h2>© Giovanni's Lodge - (330) 131 1542</h2>
     </section>
-
+    <script src="../js/bookingImages.js"></script>
 </body>
 
 </html>

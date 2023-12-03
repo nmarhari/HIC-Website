@@ -4,7 +4,7 @@
     --secondary: #FFD700; 
     --white: #EBEBEB; 
     --black: #151415; 
-    --button-light: #519872;
+    --button-light: #D8E9E0;
     --button-dark: #2B503C;
 }
 
@@ -190,6 +190,34 @@ body {
     font-size: 1.5vw;
 }
 
+.col-text ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.lodging-button {
+    text-decoration: none;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 12px 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.lodge-text h2 {
+    margin: 1vh 0;
+}
+
+.lodge-text p {
+    margin: 1vh 0;
+}
+
+.col-text ul {
+    margin-top: 0;
+}
+
 .row-img-left {
     display: flex;
 }
@@ -259,6 +287,23 @@ body {
     padding: 0 4vw;
 }
 
+.content-tri {
+    color: var(--white);
+    display: flex;
+    margin-top: 5vh;
+}
+
+.col-tri {
+    width: 33%;
+    text-align: center;
+}
+.col-tri img {
+    width: 60%;
+}
+.col-tri p {
+    padding: 0 4vw;
+}
+
 .activities-portal .row-center {
     padding: 5vh 0;
 }
@@ -282,7 +327,7 @@ body {
     font-size: 12px;
     border-radius: 20px;
     background-color: var(--button-light);
-    color: var(--white);
+    color: var(--black);
 }
 .content-split textarea {
     width: 80%;
@@ -353,6 +398,7 @@ body {
     .gio-map iframe {
         width: 80%;
     }
+    
 }
 /* Main column */
 .main {
