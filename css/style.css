@@ -124,13 +124,13 @@ body {
 }
 
 .navbar .logo {
-    width: 70px;
+    width: 500px;
     padding: 0;
-    float: left;
     overflow: none;
+    float: left;
 }
 .navbar img {
-    width: 70px;
+    width: 500px;
     height: 55px;
     float: left;
     object-fit: cover;
