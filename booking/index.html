@@ -42,7 +42,7 @@
                     <div class="cabin-selection">
                         <h3>Select your cabin</h3>
                         <div class="dropdown">
-                            <select name="cabin" id="cabin-select">
+                            <select name="cabin" id="enterCabin">
                                 <option> </option>
                                 <option value="dreamcatcher">Dreamcatcher</option>
                                 <option value="rising-sun">Rising Sun</option>
@@ -63,13 +63,13 @@
                     <span>
                         <h3>Booking information</h3>
                         <form action="">
-                            <input type="text" placeholder="Name">
-                            <input type="email" placeholder="Email">
-                            <input type="phone" placeholder="Phone (Optional)">
-                            <input type="date" placeholder="Date">
-                            <textarea rows="8" placeholder="Message (optional)"></textarea>
+                            <input type="text" placeholder="Name" id="enterName">
+                            <input type="email" placeholder="Email" id="enterEmail">
+                            <input type="phone" placeholder="Phone (Optional)" id="enterPhone">
+                            <input type="date" placeholder="Date" id="enterDate">
+                            <textarea rows="8" placeholder="Message (optional)" id="enterMessage"></textarea>
                         </form>
-                        <button>Send</button>
+                        <button id="sendButton">Send</button>
                     </span>
                 </div>
             </div>
@@ -101,6 +101,7 @@
         <h2>© Giovanni's Lodge - (330) 131 1542</h2>
     </section>
     <script src="../js/bookingImages.js"></script>
+    <script type="module" src="../js/database.js"></script>
 </body>
 
 </html>

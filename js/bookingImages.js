@@ -1,4 +1,4 @@
-document.getElementById('cabin-select').addEventListener('change', function () {
+document.getElementById('enterCabin').addEventListener('change', function () {
     // Get the selected option
     var selectedCabin = this.value;
 
