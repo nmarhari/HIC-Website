@@ -255,10 +255,21 @@ body {
 .row-center {
     text-align: center;
     color: var(--white);
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.row-center h3 {
+    width: 80%;
+}
+
 .row-center .center-header {
     margin: 5vh 0;
 }
+
 .row-center .date-selection {
     margin: 5vh 0;
 }
