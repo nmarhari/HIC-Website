@@ -1,7 +1,9 @@
 :root { 
     --primary: #112F08; 
     --dark-primary: #0D2306; 
-    --secondary: #FFD700; 
+    --secondary: #F5F9DC; 
+    --tertiary: #F9D864;
+    --gray: #9A9A9A;
     --white: #EBEBEB; 
     --black: #151415; 
     --button-light: #D8E9E0;
@@ -24,7 +26,7 @@ body {
     /*padding-top: 80px;*/
     text-align: center;
     background: var(--dark-primary);
-    color: var(--white);
+    color: var(--secondary);
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -37,7 +39,7 @@ body {
     top: 20%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
     transform: translate(-50%, -50%);
-    color: var(--white);
+    color: var(--secondary);
     z-index: 1; /* Ensure text is above the image */
     font-family: 'sans-serif', Helvetica;
     white-space: nowrap; /* Prevent text from wrapping */
@@ -51,7 +53,7 @@ body {
     top: 44%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
     transform: translate(-50%, -50%);
-    color: var(--secondary);
+    color: var(--tertiary);
     z-index: 1; /* Ensure text is above the image */
     font-family: 'sans-serif', Helvetica;
     padding-top: 10%;
@@ -59,7 +61,7 @@ body {
 
 .header a {
     text-decoration: none;
-    color: var(--secondary);
+    color: var(--tertiary);
     text-decoration: underline;
 }
 
@@ -102,7 +104,7 @@ body {
 .navbar a {
     float: right;
     display: block;
-    color: var(--white);
+    color: var(--gray);
     text-align: center;
     padding: 20px 20px;
     text-decoration: none;
@@ -153,7 +155,7 @@ body {
 .general-content {
     padding-top: 10vh;
     width: 100%;
-    color: var(--white);
+    color: var(--secondary);
     margin-bottom: 10vh;
 }
 
@@ -175,7 +177,7 @@ body {
 }
 
 .container img {
-    border: 2px solid var(--white);
+    border: 2px solid var(--secondary);
 }
 
 .col-text {
@@ -199,8 +201,8 @@ body {
 
 .lodging-button {
     text-decoration: none;
-    color: var(--secondary);
-    border: 1px solid var(--secondary);
+    color: var(--tertiary);
+    border: 1px solid var(--tertiary);
     padding: 12px 20px;
     background: transparent;
     cursor: pointer;
@@ -224,7 +226,7 @@ body {
 }
 
 .divider {
-    color: var(--white);
+    color: var(--secondary);
     margin: 5vh 10vw;
 }
 
@@ -235,7 +237,7 @@ body {
 }
 .gio-map iframe {
     width: 60%;
-    border: 2px solid var(--white);
+    border: 2px solid var(--secondary);
 }
 
 .footer {
@@ -243,17 +245,17 @@ body {
     background-color: var(--primary);
     padding: 1vh 0;
     text-decoration: none;
-    color: var(--secondary);
+    color: var(--tertiary=);
 }
 .footer a {
     text-decoration: none;
-    color: var(--secondary);
+    color: var(--tertiary);
 }
 
 
 .row-center {
     text-align: center;
-    color: var(--white);
+    color: var(--secondary);
     display: flex;
     flex: auto;
     flex-direction: column;
@@ -288,7 +290,7 @@ body {
 }
 
 .content-split {
-    color: var(--white);
+    color: var(--secondary);
     display: flex;
     margin-top: 5vh;
 }
@@ -310,7 +312,7 @@ body {
 }
 
 .content-tri {
-    color: var(--white);
+    color: var(--secondary);
     display: flex;
     margin-top: 5vh;
     justify-content: center;
@@ -319,6 +321,7 @@ body {
 
 .content-tri h1 {
     font-size: 3vw;
+    color: var(--tertiary);
 }
 
 .content-tri h2 {
@@ -361,7 +364,7 @@ body {
 }
 .back-to-activities a {
     text-decoration: none;
-    color: var(--secondary);
+    color: var(--tertiary);
 }
 .back-to-activities h2 {
     margin: 0;
