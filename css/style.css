@@ -194,6 +194,7 @@ body {
     list-style: none;
     padding: 0;
     text-align: left;
+    margin-top: 0;
 }
 
 .lodging-button {
@@ -208,14 +209,11 @@ body {
 
 .lodge-text h2 {
     margin: 1vh 0;
+    font-family: Haettenschweiler;
 }
 
 .lodge-text p {
     margin: 1vh 0;
-}
-
-.col-text ul {
-    margin-top: 0;
 }
 
 .row-img-left {
