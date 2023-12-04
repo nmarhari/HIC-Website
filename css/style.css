@@ -262,8 +262,22 @@ body {
     justify-content: center;
 }
 
+.row-center h1 {
+    font-size: 2.5vw;
+}
+
+.row-center h2 {
+    width: 50%;
+    font-size: 1.5vw;
+}
+
 .row-center h3 {
     width: 80%;
+}
+
+.row-center p {
+    font-size: 1vw;
+    width: 30%;
 }
 
 .row-center .center-header {
@@ -300,6 +314,20 @@ body {
     color: var(--white);
     display: flex;
     margin-top: 5vh;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.content-tri h1 {
+    font-size: 2vw;
+}
+
+.content-tri h2 {
+    font-size: 1.75vw;
+}
+
+.content-tri p {
+    font-size: 1.25vw;
 }
 
 .col-tri {
@@ -309,6 +337,17 @@ body {
 .col-tri img {
     width: 60%;
 }
+
+.menu-images img {
+    height: 200px;
+    width: 200px;
+}
+
+.menu-images .col-tri {
+    width: 200px;
+    margin: 0 1vw;
+}
+
 .col-tri p {
     padding: 0 4vw;
 }
@@ -373,6 +412,44 @@ body {
     .content-split .row-right {
         width: 100%;
         margin: 5vh 0;
+    }
+    .content-tri {
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-tri {
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-images .col-tri {
+        width: 100%;
+    }
+    .col-tri h1 {
+        font-size: 8vw;
+    }
+    .col-tri h2 {
+        font-size: 4vw;
+    }
+    .col-tri p {
+        font-size: 3vw;
+    }
+    .row-center h1 {
+        font-size: 7vw;
+    }
+    .row-center h2 {
+        font-size: 4vw;
+        width: 80%;
+    }
+    .row-center p {
+        font-size: 3vw;
+        width: 70%;
     }
 }
 
