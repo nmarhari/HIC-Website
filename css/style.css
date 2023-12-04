@@ -486,6 +486,9 @@ body {
     .gio-map iframe {
         width: 80%;
     }
+    .footer {
+        font-size: 3vw;
+    }
     
 }
 /* Main column */
