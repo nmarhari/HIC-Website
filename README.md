@@ -26,8 +26,8 @@ Visual Studio + Live Server Extension Method
 The website allows easy access to information about Giovanni’s Lodge and expedites the booking process. The website highlights the key features of Giovanni's Lodge, ensuring potential guests have a comprehensive understanding of what the lodge is like. Users can also book directly from our website.
 
 ## Contributors
--[nmarhari](https://github.com/nmarhari)
--[Cars-n](https://github.com/Cars-n)
--[cohenstevens](https://github.com/cohenstevens)
--[mshreff4](https://github.com/mshreff4)
--[gabemeros](https://github.com/gabemeros)
+- [nmarhari](https://github.com/nmarhari)
+- [Cars-n](https://github.com/Cars-n)
+- [cohenstevens](https://github.com/cohenstevens)
+- [mshreff4](https://github.com/mshreff4)
+- [gabemeros](https://github.com/gabemeros)
