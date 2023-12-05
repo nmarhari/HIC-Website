@@ -41,9 +41,20 @@ async function updateBookingId(newId) {
 }
 
 async function InsertData() {
+    removeRedBorders();
     const missingFields = getMissingFields();
     if(missingFields.length > 0){
         showToast(invalidMsg+missingFields.join(', '));
+        return;
+    }
+    if(!(enterEmail.value.includes("@") && enterEmail.value.includes("."))){
+        showToast(invalidEmailMsg);
+        enterEmail.classList.add('invalid-input');
+        return;
+    }
+    if(!enterPhone.value.match(/^[0-9]{10}$/)){
+        showToast(invalidPhoneMsg);
+        enterPhone.classList.add('invalid-input');
         return;
     }
     const bookingId = await getNextBookingId();
@@ -65,6 +76,39 @@ async function InsertData() {
         });
 }
 
+function getMissingFields() {
+    // Track missing fields
+    let missingFields = [];
+
+    // Check each field
+    if (!enterCabin.value) {
+        missingFields.push('cabin');
+        enterCabin.classList.add('invalid-input');
+    }
+    if (!enterName.value) {
+        missingFields.push('name');
+        enterName.classList.add('invalid-input');
+    }
+    if (!enterEmail.value) {
+        missingFields.push('email');
+        enterEmail.classList.add('invalid-input');
+    }
+    if (!enterDate.value) {
+        missingFields.push('date');
+        enterDate.classList.add('invalid-input');
+    }
+
+    return missingFields;
+}
+
+function removeRedBorders() {
+    enterCabin.classList.remove('invalid-input');
+    enterName.classList.remove('invalid-input');
+    enterEmail.classList.remove('invalid-input');
+    enterPhone.classList.remove('invalid-input');
+    enterDate.classList.remove('invalid-input');
+}
+
 sendButton.addEventListener('click', InsertData);
 
 // Input validation
@@ -72,6 +116,8 @@ sendButton.addEventListener('click', InsertData);
 let toastBox = document.getElementById('toastBox');
 let successMsg = '<i class="fa-solid fa-circle-check"></i>Booking submitted successfully'
 let invalidMsg = '<i class="fa-solid fa-circle-xmark"></i>Can\'t submit booking without '
+let invalidEmailMsg = '<i class="fa-solid fa-circle-xmark"></i>Provided email is not valid'
+let invalidPhoneMsg = '<i class="fa-solid fa-circle-xmark"></i>Provided phone number is not valid'
 let errorMsg = '<i class="fa-solid fa-circle-xmark"></i>Failed to reach database'
 
 function showToast(msg) {
@@ -82,7 +128,7 @@ function showToast(msg) {
     // Append the toast to the toastBox
     toastBox.appendChild(toast);
 
-    if(msg.includes('Can\'t') || msg.includes('Failed')){
+    if(!msg.includes('success')){
         toast.classList.add('error')
     }
 
@@ -90,25 +136,4 @@ function showToast(msg) {
     setTimeout(()=>{
         toast.remove();
     },7000)
-}
-
-function getMissingFields() {
-    // Track missing fields
-    let missingFields = [];
-
-    // Check each field
-    if (!enterCabin.value) {
-        missingFields.push('cabin');
-    }
-    if (!enterName.value) {
-        missingFields.push('name');
-    }
-    if (!enterEmail.value) {
-        missingFields.push('email');
-    }
-    if (!enterDate.value) {
-        missingFields.push('date');
-    }
-
-    return missingFields;
 }
