@@ -5,7 +5,9 @@ Welcome to Giovanni’s Lodge - your ultimate destination for an unforgettable e
 ## Requirements
 
 - Web Browser (Chrome, Firefox, Edge, etc.)
+  
 OR
+
 - Git
 - Visual Studio + Live Server Extension
 
