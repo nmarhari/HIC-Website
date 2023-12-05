@@ -208,6 +208,8 @@ body {
     background: transparent;
     cursor: pointer;
     transition: 1s;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 .lodging-button:hover{
@@ -400,14 +402,6 @@ body {
     color: var(--black);
 }
 
-.booking-content button {
-    padding: 12px 20px;
-    margin-bottom: 2vh;
-    border-radius: 20px;
-    background-color: var(--button-dark);
-    color: var(--white);
-    font-weight: bold;
-}
 
 @media screen and (max-width: 600px) {
     .content-split {
