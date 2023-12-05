@@ -56,11 +56,11 @@
                             </select>
                         </div>
                         <img src="https://columbiawoodlands.com/assets/images/Dreamcatcher8.png" id="dreamcatcherImage" class="cabin-image">
-                        <img src="https://gallery.streamlinevrs.com/locations-images/image_347122.jpeg" id="risingSunImage" class="cabin-image">
-                        <img src="https://www.gannett-cdn.com/presto/2019/07/15/PSTC/48eb92e8-6074-45c5-be56-4ec32c80f8c8-1.jpg?crop=3599,2025,x0,y0&width=3200&height=1680&fit=bounds" id="magnoliaImage" class="cabin-image">
+                        <img src="http://127.0.0.1:5500/img/lodging-risingsun.jpg" id="risingSunImage" class="cabin-image">
+                        <img src="http://127.0.0.1:5500/img/lodging-magnolia.png" id="magnoliaImage" class="cabin-image">
                         <img src="https://th.bing.com/th/id/R.b76360be6aa800366d1254faec23aed4?rik=l0uGFjIQiUopRQ&pid=ImgRaw&r=0" id="rockpathImage" class="cabin-image">
                         <br>
-                        <span id="total"></span>
+                        <span class="total" id="total"></span>
                     </div>
                 </div>
 
@@ -74,18 +74,19 @@
                             <input type="date" placeholder="Date" id="enterDate">
                             <textarea type="text" rows="8" placeholder="Message (optional)" id="enterMessage"></textarea>
                         </form>
-                        <button onclick="showToast()" id="sendButton">Send</button>
+                        <button class="lodging-button" onclick="showToast()" id="sendButton">Send</button>
                     </span>
                 </div>
             </div>
             <div class="content-tri">
                 <div class="col-tri">
                         <h3>Take me there!</h3>
-                        <button>Directions</button>
+                        <a href="https://www.google.com/maps/dir//Mohican+Cabin+Rental+975+Co+Rd+3006+Perrysville,+OH+44864/@40.6244813,-82.3131275,7z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8839dd7c05eb8f61:0x1010958ba961732!2m2!1d-82.3131275!2d40.6244813?entry=ttu" target="_blank">
+                        <a href="tel:555-0100"></a><button class="lodging-button">Directions</button></a>
                 </div>
                 <div class="col-tri">
                     <h3>(330) 333 3333</h3>
-                    <button>Call Us</button>
+                    <button class="lodging-button">Call Us</button>
                 </div>
                 <div class="col-tri">
                     <h3>Check out our socials!</h3>
