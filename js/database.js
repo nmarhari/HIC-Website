@@ -46,6 +46,14 @@ async function InsertData() {
         showToast(invalidMsg+missingFields.join(', '));
         return;
     }
+    if(!(enterEmail.value.includes("@") && enterEmail.value.includes("."))){
+        showToast(invalidEmailMsg);
+        return;
+    }
+    if(!enterPhone.value.match(/^[0-9]{10}$/)){
+        showToast(invalidPhoneMsg);
+        return;
+    }
     const bookingId = await getNextBookingId();
 
     set(ref(db, 'Bookings/' + bookingId), {
@@ -63,33 +71,6 @@ async function InsertData() {
         .catch((error) => {
             showToast(errorMsg)
         });
-}
-
-sendButton.addEventListener('click', InsertData);
-
-// Input validation
-// Select the toastBox by its ID
-let toastBox = document.getElementById('toastBox');
-let successMsg = '<i class="fa-solid fa-circle-check"></i>Booking submitted successfully'
-let invalidMsg = '<i class="fa-solid fa-circle-xmark"></i>Can\'t submit booking without '
-let errorMsg = '<i class="fa-solid fa-circle-xmark"></i>Failed to reach database'
-
-function showToast(msg) {
-    let toast = document.createElement('div');
-    toast.classList.add('toast');
-    toast.innerHTML = msg;
-    
-    // Append the toast to the toastBox
-    toastBox.appendChild(toast);
-
-    if(msg.includes('Can\'t') || msg.includes('Failed')){
-        toast.classList.add('error')
-    }
-
-    // Removes toast after time passes
-    setTimeout(()=>{
-        toast.remove();
-    },7000)
 }
 
 function getMissingFields() {
@@ -111,4 +92,33 @@ function getMissingFields() {
     }
 
     return missingFields;
+}
+
+sendButton.addEventListener('click', InsertData);
+
+// Input validation
+// Select the toastBox by its ID
+let toastBox = document.getElementById('toastBox');
+let successMsg = '<i class="fa-solid fa-circle-check"></i>Booking submitted successfully'
+let invalidMsg = '<i class="fa-solid fa-circle-xmark"></i>Can\'t submit booking without '
+let invalidEmailMsg = '<i class="fa-solid fa-circle-xmark"></i>Provided email is not valid'
+let invalidPhoneMsg = '<i class="fa-solid fa-circle-xmark"></i>Provided phone number is not valid'
+let errorMsg = '<i class="fa-solid fa-circle-xmark"></i>Failed to reach database'
+
+function showToast(msg) {
+    let toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = msg;
+    
+    // Append the toast to the toastBox
+    toastBox.appendChild(toast);
+
+    if(!msg.includes('success')){
+        toast.classList.add('error')
+    }
+
+    // Removes toast after time passes
+    setTimeout(()=>{
+        toast.remove();
+    },7000)
 }
