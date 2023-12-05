@@ -245,7 +245,7 @@ body {
     background-color: var(--primary);
     padding: 1vh 0;
     text-decoration: none;
-    color: var(--tertiary=);
+    color: var(--tertiary);
 }
 .footer a {
     text-decoration: none;
@@ -390,7 +390,7 @@ body {
     font-size: 12px;
     border-radius: 20px;
     background-color: var(--button-light);
-    color: var(--white);
+    color: var(--black);
 }
 
 .booking-content button {
