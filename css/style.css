@@ -120,12 +120,13 @@ body {
 }
 
 /* Change color on hover */
-.navbar a:hover {
+.navbar .navItem:hover {
     background-color: var(--white);
     color: var(--black);
 }
 
 .navbar .logo {
+    transform: scale(0.8);
     padding: 0;
     float: left;
     overflow: none;
