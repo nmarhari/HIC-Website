@@ -126,13 +126,14 @@ body {
 }
 
 .navbar .logo {
-    width: 70px;
     padding: 0;
     float: left;
     overflow: none;
 }
+.logo:hover img{
+    filter: invert(1);
+}
 .navbar img {
-    width: 70px;
     height: 55px;
     float: left;
     object-fit: cover;
