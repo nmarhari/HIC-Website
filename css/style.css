@@ -376,7 +376,7 @@ body {
     padding: 15px;
     font-size: 12px;
     border-radius: 20px;
-    background-color: var(--button-light);
+    background-color: var(--white);
     color: var(--black);
 }
 .content-split textarea {
@@ -389,7 +389,7 @@ body {
     font-family: Arial, helvetica, sans-serif;
     font-size: 12px;
     border-radius: 20px;
-    background-color: var(--button-light);
+    background-color: var(--white);
     color: var(--black);
 }
 

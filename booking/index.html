@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/booking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e2ebeb5a47.js" crossorigin="anonymous"></script>
     <script src="../js/showNav.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,11 +28,16 @@
         </a>
     </ul>
 
+
+    
+
     <div class="header">
         <img src="../img/booking-header.jpg" alt="Header Image">
         <h1>Start your adventure!</h1>
 
     </div>
+
+    <div id="toastBox"></div>
 
     <section class="booking-content">
         <div class="container">
@@ -68,7 +74,7 @@
                             <input type="date" placeholder="Date" id="enterDate">
                             <textarea type="text" rows="8" placeholder="Message (optional)" id="enterMessage"></textarea>
                         </form>
-                        <button id="sendButton">Send</button>
+                        <button onclick="showToast()" id="sendButton">Send</button>
                     </span>
                 </div>
             </div>
@@ -84,9 +90,9 @@
                 <div class="col-tri">
                     <h3>Check out our socials!</h3>
                         <div class="socials">
-                            <i class=""></i>
-                            <i class=""></i>
-                            <i class=""></i>
+                            <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
+                            <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
+                            <a href="https://www.twitter.com/" target="_blank" class="fa-brands fa-x-twitter"></a>
                         </div>
                 </div>
             </div>
