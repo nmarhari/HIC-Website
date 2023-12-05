@@ -177,7 +177,6 @@ body {
 }
 .col-img img {
     width: 25vw;
-    aspect-ratio: 1.75/1.25;
 }
 
 .container img {
