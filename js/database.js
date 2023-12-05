@@ -41,6 +41,7 @@ async function updateBookingId(newId) {
 }
 
 async function InsertData() {
+    removeRedBorders();
     const missingFields = getMissingFields();
     if(missingFields.length > 0){
         showToast(invalidMsg+missingFields.join(', '));
@@ -48,10 +49,12 @@ async function InsertData() {
     }
     if(!(enterEmail.value.includes("@") && enterEmail.value.includes("."))){
         showToast(invalidEmailMsg);
+        enterEmail.classList.add('invalid-input');
         return;
     }
     if(!enterPhone.value.match(/^[0-9]{10}$/)){
         showToast(invalidPhoneMsg);
+        enterPhone.classList.add('invalid-input');
         return;
     }
     const bookingId = await getNextBookingId();
@@ -80,18 +83,30 @@ function getMissingFields() {
     // Check each field
     if (!enterCabin.value) {
         missingFields.push('cabin');
+        enterCabin.classList.add('invalid-input');
     }
     if (!enterName.value) {
         missingFields.push('name');
+        enterName.classList.add('invalid-input');
     }
     if (!enterEmail.value) {
         missingFields.push('email');
+        enterEmail.classList.add('invalid-input');
     }
     if (!enterDate.value) {
         missingFields.push('date');
+        enterDate.classList.add('invalid-input');
     }
 
     return missingFields;
+}
+
+function removeRedBorders() {
+    enterCabin.classList.remove('invalid-input');
+    enterName.classList.remove('invalid-input');
+    enterEmail.classList.remove('invalid-input');
+    enterPhone.classList.remove('invalid-input');
+    enterDate.classList.remove('invalid-input');
 }
 
 sendButton.addEventListener('click', InsertData);

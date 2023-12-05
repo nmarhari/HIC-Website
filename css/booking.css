@@ -23,6 +23,10 @@
     font-weight: bold;
 }
 
+.invalid-input{
+    border: 2px solid var(--error);
+}
+
 .toast {
     position: fixed;
     top: 0;
