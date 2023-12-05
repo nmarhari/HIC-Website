@@ -57,6 +57,13 @@ async function InsertData() {
         enterPhone.classList.add('invalid-input');
         return;
     }
+    var selectedDate = new Date(enterDate.value)
+    if(selectedDate < new Date()){
+        showToast(oldDateMsg);
+        enterDate.classList.add('invalid-input');
+        return;
+    } 
+    
     const bookingId = await getNextBookingId();
 
     set(ref(db, 'Bookings/' + bookingId), {
@@ -118,6 +125,7 @@ let successMsg = '<i class="fa-solid fa-circle-check"></i>Booking submitted succ
 let invalidMsg = '<i class="fa-solid fa-circle-xmark"></i>Can\'t submit booking without '
 let invalidEmailMsg = '<i class="fa-solid fa-circle-xmark"></i>Provided email is not valid'
 let invalidPhoneMsg = '<i class="fa-solid fa-circle-xmark"></i>Provided phone number is not valid'
+let oldDateMsg = '<i class="fa-solid fa-circle-xmark"></i>The selected date has already passed'
 let errorMsg = '<i class="fa-solid fa-circle-xmark"></i>Failed to reach database'
 
 function showToast(msg) {
@@ -137,3 +145,4 @@ function showToast(msg) {
         toast.remove();
     },7000)
 }
+
