@@ -135,6 +135,8 @@ body {
 }
 .navbar img {
     height: 55px;
+    padding-left: 5px;
+    padding-top: 5px;
     float: left;
     object-fit: cover;
     object-position: center;
@@ -531,7 +533,7 @@ body {
 
 /* when screen is less than 600px, hide all links except home
 and show link that will close navbar*/
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 892px) {
     .navbar a:not(:last-child){ 
         display: none; 
     }
@@ -541,7 +543,7 @@ and show link that will close navbar*/
     }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 892px) {
     .navbar.responsive { position: relative;}
     .navbar.responsive a:last-child { display: none; }
     .navbar.responsive a.icon {
