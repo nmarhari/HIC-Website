@@ -345,6 +345,8 @@ body {
 .col-tri {
     width: 33%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 .col-tri img {
     width: 60%;
