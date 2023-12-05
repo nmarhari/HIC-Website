@@ -1,4 +1,77 @@
-.cabin-image{
+:root {
+    --primary: #112F08; 
+    --dark-primary: #0D2306; 
+    --secondary: #F5F9DC; 
+    --tertiary: #F9D864;
+    --gray: #9A9A9A;
+    --white: #EBEBEB; 
+    --black: #151415; 
+    --button-light: #D8E9E0;
+    --button-dark: #2B503C;
+    --success: #519872;
+    --error: #e26767;
+}
+
+.cabin-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: none;
-    width: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.toast {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 475px;
+    height: 80px;
+    background: var(--white);
+    border-radius: 10px;
+    border: 2px solid var(--success);
+    font-weight: 500;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    /* Ensure the toast is above other elements */
+}
+
+.toast.error {
+    border: 2px solid var(--error);
+}
+
+.toast i {
+    margin: 0 20px;
+    font-size: 35px;
+    color: var(--success);
+}
+
+.toast.error i {
+    color: var(--error);
+}
+
+/* unvisited link */
+.fa-brands {
+    color: var(--success);
+    text-decoration: none;
+    
+}
+
+/* visited link */
+.fa-brands:visited {
+    color: var(--success);
+}
+
+/* mouse over link */
+.fa-brands:hover {
+    color: var(--secondary);
+}
+
+/* selected link */
+.fa-brands:active {
+    color: var(--success);
 }

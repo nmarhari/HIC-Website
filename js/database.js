@@ -41,9 +41,14 @@ async function updateBookingId(newId) {
 }
 
 async function InsertData() {
+    const missingFields = getMissingFields();
+    if(missingFields.length > 0){
+        showToast(invalidMsg+missingFields.join(', '));
+        return;
+    }
     const bookingId = await getNextBookingId();
 
-    set(ref(db, "Bookings/" + bookingId), {
+    set(ref(db, 'Bookings/' + bookingId), {
         Cabin: enterCabin.value,
         Name: enterName.value,
         Email: enterEmail.value,
@@ -53,11 +58,57 @@ async function InsertData() {
     })
         .then(() => {
             updateBookingId(bookingId);
-            alert("Data added successfully!")
+            showToast(successMsg);
         })
         .catch((error) => {
-            alert(error)
+            showToast(errorMsg)
         });
 }
 
 sendButton.addEventListener('click', InsertData);
+
+// Input validation
+// Select the toastBox by its ID
+let toastBox = document.getElementById('toastBox');
+let successMsg = '<i class="fa-solid fa-circle-check"></i>Booking submitted successfully'
+let invalidMsg = '<i class="fa-solid fa-circle-xmark"></i>Can\'t submit booking without '
+let errorMsg = '<i class="fa-solid fa-circle-xmark"></i>Failed to reach database'
+
+function showToast(msg) {
+    let toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = msg;
+    
+    // Append the toast to the toastBox
+    toastBox.appendChild(toast);
+
+    if(msg.includes('Can\'t') || msg.includes('Failed')){
+        toast.classList.add('error')
+    }
+
+    // Removes toast after time passes
+    setTimeout(()=>{
+        toast.remove();
+    },7000)
+}
+
+function getMissingFields() {
+    // Track missing fields
+    let missingFields = [];
+
+    // Check each field
+    if (!enterCabin.value) {
+        missingFields.push('cabin');
+    }
+    if (!enterName.value) {
+        missingFields.push('name');
+    }
+    if (!enterEmail.value) {
+        missingFields.push('email');
+    }
+    if (!enterDate.value) {
+        missingFields.push('date');
+    }
+
+    return missingFields;
+}
