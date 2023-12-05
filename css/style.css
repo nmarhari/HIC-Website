@@ -211,7 +211,6 @@ body {
 
 .lodge-text h2 {
     margin: 1vh 0;
-    font-family: Haettenschweiler;
 }
 
 .lodge-text p {
@@ -324,7 +323,6 @@ body {
 .content-tri h1 {
     font-size: 3vw;
     color: var(--tertiary);
-    font-family: Haettenschweiler;
 }
 
 .content-tri h2 {
