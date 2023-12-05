@@ -136,6 +136,8 @@ body {
 }
 .navbar img {
     height: 55px;
+    padding-left: 5px;
+    padding-top: 5px;
     float: left;
     object-fit: cover;
     object-position: center;
@@ -176,7 +178,6 @@ body {
 }
 .col-img img {
     width: 25vw;
-    aspect-ratio: 1.75/1.25;
 }
 
 .container img {
@@ -276,6 +277,7 @@ body {
 
 .row-center h1 {
     font-size: 2.5vw;
+    color: var(--tertiary);
 }
 
 .row-center h2 {
@@ -346,6 +348,8 @@ body {
 .col-tri {
     width: 33%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 .col-tri img {
     width: 60%;
@@ -529,7 +533,7 @@ body {
 
 /* when screen is less than 600px, hide all links except home
 and show link that will close navbar*/
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 892px) {
     .navbar a:not(:last-child){ 
         display: none; 
     }
@@ -539,7 +543,7 @@ and show link that will close navbar*/
     }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 892px) {
     .navbar.responsive { position: relative;}
     .navbar.responsive a:last-child { display: none; }
     .navbar.responsive a.icon {

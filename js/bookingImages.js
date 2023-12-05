@@ -19,11 +19,11 @@ function updateCabinInfo(selectedCabin) {
     switch (selectedCabin) {
         case 'dreamcatcher':
             document.getElementById('dreamcatcherImage').style.display = 'inline-block';
-            totalElement.textContent = 'Your total is: $85.00';
+            totalElement.textContent = 'Your total is: $175.00';
             break;
         case 'rising-sun':
             document.getElementById('risingSunImage').style.display = 'inline-block';
-            totalElement.textContent = 'Your total is: $175.00';
+            totalElement.textContent = 'Your total is: $85.00';
             break;
         case 'magnolia':
             document.getElementById('magnoliaImage').style.display = 'inline-block';
