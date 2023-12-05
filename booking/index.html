@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/booking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../js/showNav.js" crossorigin="anonymous"></script>
-    <script src="../js/calendar.js" defer></script>
 </head>
 
 <body>
@@ -67,30 +66,28 @@
                             <input type="email" placeholder="Email" id="enterEmail">
                             <input type="phone" placeholder="Phone (Optional)" id="enterPhone">
                             <input type="date" placeholder="Date" id="enterDate">
-                            <textarea rows="8" placeholder="Message (optional)" id="enterMessage"></textarea>
+                            <textarea type="text" rows="8" placeholder="Message (optional)" id="enterMessage"></textarea>
                         </form>
                         <button id="sendButton">Send</button>
                     </span>
                 </div>
             </div>
-            <div class="col-tri">
-                <div class="row">
-                    <span class="content-tri">
+            <div class="content-tri">
+                <div class="col-tri">
                         <h3>Take me there!</h3>
                         <button>Directions</button>
-                    </span>
-                    <span class="content-tri">
-                        <h3>(330) 333 3333</h3>
-                        <button>Call Us</button>
-                    </span>
-                    <span class="content-tri">
-                        <h3>Check out our socials!</h3>
+                </div>
+                <div class="col-tri">
+                    <h3>(330) 333 3333</h3>
+                    <button>Call Us</button>
+                </div>
+                <div class="col-tri">
+                    <h3>Check out our socials!</h3>
                         <div class="socials">
                             <i class=""></i>
                             <i class=""></i>
                             <i class=""></i>
                         </div>
-                    </span>
                 </div>
             </div>
 
@@ -98,8 +95,9 @@
     </section>
 
     <section class="footer">
-        <h2>© Giovanni's Lodge - (330) 131 1542</h2>
+        <h2><a href="../booking#">© Giovanni's Lodge - (330) 131 1542</a></h2>
     </section>
+
     <script src="../js/bookingImages.js"></script>
     <script type="module" src="../js/database.js"></script>
 </body>
