@@ -17,19 +17,19 @@ function updateCabinInfo(selectedCabin) {
 
     // Update image and total price based on the selected cabin
     switch (selectedCabin) {
-        case 'dreamcatcher':
+        case 'Dreamcatcher':
             document.getElementById('dreamcatcherImage').style.display = 'inline-block';
             totalElement.textContent = 'Your total is: $175.00';
             break;
-        case 'rising-sun':
+        case 'Rising Sun':
             document.getElementById('risingSunImage').style.display = 'inline-block';
             totalElement.textContent = 'Your total is: $85.00';
             break;
-        case 'magnolia':
+        case 'Magnolia':
             document.getElementById('magnoliaImage').style.display = 'inline-block';
             totalElement.textContent = 'Your total is: $200.00';
             break;
-        case 'rockpath':
+        case 'Rockpath':
             document.getElementById('rockpathImage').style.display = 'inline-block';
             totalElement.textContent = 'Your total is: $250.00';
             break;

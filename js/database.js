@@ -63,6 +63,19 @@ async function InsertData() {
         enterDate.classList.add('invalid-input');
         return;
     } 
+
+    const existingBookingsRef = ref(db, 'Bookings');
+    const existingBookingsSnapshot = await get(existingBookingsRef);
+
+    const conflictingBooking = Object.values(existingBookingsSnapshot.val() || {}).find(booking => {
+        return booking.Cabin === enterCabin.value && booking.Date === enterDate.value;
+    });
+
+    if (conflictingBooking) {
+        showToast(`<i class="fa-solid fa-circle-xmark"></i>The selected date for ${enterCabin.value} has already been booked`);
+        enterDate.classList.add('invalid-input');
+        return;
+    }
     
     const bookingId = await getNextBookingId();
 
@@ -132,17 +145,28 @@ function showToast(msg) {
     let toast = document.createElement('div');
     toast.classList.add('toast');
     toast.innerHTML = msg;
-    
+
+    // Apply fade-in effect
+    toast.style.opacity = "0";
+    toast.style.transition = "opacity 0.5s ease-in-out";
+    setTimeout(() => {
+        toast.style.opacity = "1";
+    }, 10);
+
     // Append the toast to the toastBox
     toastBox.appendChild(toast);
 
-    if(!msg.includes('success')){
-        toast.classList.add('error')
+    if (!msg.includes('success')) {
+        toast.classList.add('error');
     }
 
     // Removes toast after time passes
-    setTimeout(()=>{
-        toast.remove();
-    },7000)
+    setTimeout(() => {
+        // Apply fade-out effect
+        toast.style.opacity = "0";
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    }, 6500);
 }
 

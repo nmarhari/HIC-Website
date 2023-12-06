@@ -32,7 +32,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 480px;
+    width: 500px;
     height: 80px;
     background: var(--white);
     border-radius: 10px;
@@ -50,7 +50,7 @@
 }
 
 .toast i {
-    margin: 0 10px;
+    padding: 10px;
     font-size: 35px;
     color: var(--success);
 }
